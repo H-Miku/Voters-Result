@@ -7,7 +7,7 @@ body {
 }
 
 .dashboard {
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
   margin: auto;
 }
@@ -15,8 +15,7 @@ body {
 /* Header Section */
 header {
   padding: 15px; /* Thinner header */
-  /*background: linear-gradient(to right, #b3e5fc, #81d4fa, #4fc3f7);*/
- background: white;
+  background: linear-gradient(to right, #b3e5fc, #81d4fa, #4fc3f7);
   display: flex;
   width: 100%;
   justify-content: space-between;
