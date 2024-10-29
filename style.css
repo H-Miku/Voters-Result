@@ -15,7 +15,8 @@ body {
 /* Header Section */
 header {
   padding: 15px; /* Thinner header */
-  background: linear-gradient(to right, #b3e5fc, #81d4fa, #4fc3f7);
+  /*background: linear-gradient(to right, #b3e5fc, #81d4fa, #4fc3f7);*/
+ background: white;
   display: flex;
   width: 100%;
   justify-content: space-between;
