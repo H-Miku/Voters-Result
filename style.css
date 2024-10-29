@@ -82,26 +82,20 @@ h2 {
 }
 
 .header-buttons button:hover {
-  background: linear-gradient(to right, #0D47A1, #1565C0, #1976D2); /* Slightly darker on hover */
-}
-
-.stats {
-  display: flex;
-  justify-content: space-around; /* Space between charts */
-  padding: 20px 0;
-  background-color: #ffffff;
+  background: linear-gradient(to right, #0D47A1, #1565C0, #1976D2); 
 }
 
 .stats div {
   display: flex;
   flex-direction: column; /* Arrange title and canvas vertically */
-  align-items: flex-start; /* Align items to the start */
+  align-items: center; /* Center the items */
+  width: 50%; /* Set a width to ensure equal sizing */
 }
 
 canvas {
   width: 180px !important; /* Force the width */
   height: 180px !important; /* Force the height */
-  margin-top: 30px; /* Space between the title and the chart */
+  margin-top: 10px; /* Space between the title and the chart */
 }
 
 .results-table {
