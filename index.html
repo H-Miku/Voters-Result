@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Election Results Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
+</head>
+<body>
+
+<div class="dashboard">
+  <!-- Header Section -->
+  <header>
+    <div>
+      <h1>Election Results Dashboard</h1>
+    </div>
+    <div class="header-buttons">
+      <button onclick="window.print()">
+        <i class="fas fa-print"></i> Print
+      </button>
+      <button onclick="publish()">
+        <i class="fas fa-paper-plane"></i> Publish
+      </button>
+    </div>
+  </header>
+
+  <!-- Filters Section -->
+  <div class="filters">
+    <label>Election:</label>
+    <select>
+      <option>President</option>
+    </select>
+    <label>Type:</label>
+    <select>
+      <option>SSG</option>
+    </select>
+    <label>Filter By:</label>
+    <select>
+      <option>Select</option>
+    </select>
+    <label>Year:</label>
+    <select>
+      <option>Select</option>
+    </select>
+    <div class="status-label">Status: <span class="status-completed">Completed</span></div>
+  </div>
+
+  <!-- Statistics Section -->
+  <div class="stats">
+    <div class="turnout">
+      <h2>Participation Rate</h2>
+      <canvas id="turnoutChart" width="180" height="180"></canvas>
+    </div>
+    <div class="ballots">
+      <h2>Votes Cast</h2>
+      <canvas id="ballotsChart" width="180" height="180"></canvas>
+    </div>
+  </div>
+
+  <!-- Results Table Section -->
+  <div class="results-table">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Gender</th>
+          <th>Party</th>
+          <th>Elected</th>
+          <th>% of Votes</th>
+          <th>Total Votes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Candidate 1</td>
+          <td>Female</td>
+          <td>PT1</td>
+          <td class="elected-yes">Yes</td>
+          <td>
+            <div class="vote-bar-container">
+              23.73%
+              <div class="vote-bar" style="width: 23.73%;"></div>
+            </div>
+          </td>
+          <td>4,068</td>
+        </tr>
+        <tr>
+          <td>Candidate 2</td>
+          <td>Male</td>
+          <td>PT2</td>
+          <td class="elected-yes">Yes</td>
+          <td>
+            <div class="vote-bar-container">
+              16.95%
+              <div class="vote-bar" style="width: 16.95%;"></div>
+            </div>
+          </td>
+          <td>2,906</td>
+        </tr>
+        <tr>
+          <td>Candidate 3</td>
+          <td>Male</td>
+          <td>PT1</td>
+          <td class="elected-yes">Yes</td>
+          <td>
+            <div class="vote-bar-container">
+              16.80%
+              <div class="vote-bar" style="width: 16.80%;"></div>
+            </div>
+          </td>
+          <td>2,880</td>
+        </tr>
+        <tr>
+          <td>Candidate 4</td>
+          <td>Male</td>
+          <td>PT3</td>
+          <td class="elected-yes">Yes</td>
+          <td>
+            <div class="vote-bar-container">
+              16.59%
+              <div class="vote-bar" style="width: 16.59%;"></div>
+            </div>
+          </td>
+          <td>2,845</td>
+        </tr>
+        <tr>
+          <td>Candidate 5</td>
+          <td>Male</td>
+          <td>PT3</td>
+          <td class="elected-no">No</td>
+          <td>
+            <div class="vote-bar-container">
+              12.35%
+              <div class="vote-bar" style="width: 12.35%;"></div>
+            </div>
+          </td>
+          <td>2,117</td>
+        </tr>
+        <tr>
+          <td>Candidate 6</td>
+          <td>Male</td>
+          <td>PT1</td>
+          <td class="elected-yes">Yes</td>
+          <td>
+            <div class="vote-bar-container">
+              11.78%
+              <div class="vote-bar" style="width: 11.78%;"></div>
+            </div>
+          </td>
+          <td>2,020</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
