@@ -82,7 +82,14 @@ h2 {
 }
 
 .header-buttons button:hover {
-  background: linear-gradient(to right, #0D47A1, #1565C0, #1976D2); 
+  background: linear-gradient(to right, #0D47A1, #1565C0, #1976D2); /* Slightly darker on hover */
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between; /* Adjust to space between for better alignment */
+  padding: 20px 0;
+  background-color: #ffffff;
 }
 
 .stats div {
